@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue1</title>
+		<script src="../vue.js"></script>
+		<script src="../vue.min.js"></script>
+		<script>
+			window.onload=function(){
+				var c=new Vue({   //Vue开头必须大写
+					el:'#box',
+					data:{
+						msg:'welcome vue',
+						msg2:12,
+						msg3:true,
+						arr:['apple','orange','banner'],
+						json:{a:'apple',b:'bannner',c:'blue'},
+						message:'<h1>高兴</h1>',
+						test:'渣渣'
+					}
+				});
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<input type="text" v-model="msg"/>
+			<div v-html="message"></div>
+			<br/>
+			{{msg}}
+			<br/>
+			{{msg2}}
+			<br/>
+			{{msg3}}
+			<br/>
+			{{arr}}
+			<br/>
+			{{json}}
+			<br/>
+			{{test}}
+		</div>
+		
+	</body>
+</html>
